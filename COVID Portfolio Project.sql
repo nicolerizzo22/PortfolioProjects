@@ -46,18 +46,7 @@ WHERE continent IS NOT null
 GROUP BY location
 ORDER BY TotalDeathCount desc;
 
-
---LET'S BREAK THINGS DOWN BY CONTINENT 
---Showing continents with the highest death count per population
---(this script is correct but for visualization purposes will use 'WHERE continent IS NOT NULL' and group by continent)
-
---SELECT location, MAX(total_deaths) as TotalDeathCount
---FROM PortfolioProject..CovidDeaths_csv
---WHERE location like '%states%'
---WHERE continent IS null
---GROUP BY location
---ORDER BY TotalDeathCount desc;
-
+-- By continent
 SELECT continent, MAX(total_deaths) as TotalDeathCount
 FROM PortfolioProject..CovidDeaths_csv
 --WHERE location like '%states%'
